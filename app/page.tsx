@@ -1,13 +1,16 @@
-import Navbar from "./components/ui/navbar"
+import Navbar from "../components/layout/Navbar"
+import Hero from "../components/sections/Hero"
+import Actuhome from "../components/sections/ActuHome"
 
 export default function Home() {
   return (
-    <>
+    <div className="">
       <Navbar/>
       <main>
-        <p className="text-white text-3xl">coucou</p>
+        <Hero/>
+        <Actuhome/>
       </main>
-    </>
+    </div>
 
   )
 }
