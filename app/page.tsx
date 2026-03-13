@@ -1,6 +1,6 @@
-import Navbar from "./components/ui/navbar"
-import Hero from "./components/ui/hero"
-import Actuhome from "./components/ui/actu"
+import Navbar from "../components/layout/Navbar"
+import Hero from "../components/sections/Hero"
+import Actuhome from "../components/sections/ActuHome"
 
 export default function Home() {
   return (
