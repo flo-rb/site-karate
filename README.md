@@ -4,7 +4,7 @@ Site web du club de karaté **Le Mée Sport Karaté**, réalisé avec Next.js da
 
 ---
 
-## 📋 Description
+## Description
 
 Ce projet est le site vitrine du club. Il a pour objectif de présenter le club, ses actualités, ses cours et tarifs, sa galerie photo, ainsi que les informations de contact.
 
@@ -14,7 +14,7 @@ Il me sert également de terrain d'apprentissage pour **React**, **Next.js** et 
 
 ## Technologies utilisées
 
-- [Next.js 15](https://nextjs.org/) — framework React (avec App Router)
+- [Next.js 15](https://nextjs.org/) — framework React
 - [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
@@ -25,21 +25,35 @@ Il me sert également de terrain d'apprentissage pour **React**, **Next.js** et 
 
 ```
 site-club-karate/
-├── app/
-│   ├── components/
-│   │   └── ui/
-│   │       ├── navbar.tsx      # Barre de navigation
-│   │       ├── hero.tsx        # Section hero (image + titre)
-│   │       └── actu.tsx        # Section actualités
-│   ├── globals.css             # Variables CSS + config Tailwind
-│   ├── layout.tsx              # Layout racine (métadonnées, polices)
-│   └── page.tsx                # Page d'accueil
-├── public/
-│   └── home/
-│       ├── hero.jpg
-│       ├── photo-groupe.jpg
-│       └── shotokan-tiger.png
-└── ...
+├── app/                          # Routing Next.js
+│   ├── globals.css               # Styles globaux (Tailwind)
+│   ├── layout.tsx                # Layout global
+│   ├── page.tsx                  # Page d'accueil (SPA scrollable)
+│   ├── actualites/
+│   │   ├── page.tsx              # Liste des actualités
+│   │   └── [slug]/
+│   │       └── page.tsx          # Détail d'une actualité
+│   ├── cours-tarifs/
+│   │   └── page.tsx
+│   ├── galerie/
+│   │   └── page.tsx
+│   └── contact/
+│       └── page.tsx
+│
+├── components/
+│   ├── layout/                   # Composants présents sur toutes les pages
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── sections/                 # Sections de la homepage
+│   │   ├── Hero.tsx
+│   │   └── ActuHome.tsx
+│   └── ui/                       # Composants génériques réutilisables
+│       └── Button.tsx
+│
+└── public/                       # Assets statiques
+    └── images/
+        ├── home/
+        └── galerie/
 ```
 ---
 
